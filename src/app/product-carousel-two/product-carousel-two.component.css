@@ -1,0 +1,114 @@
+.product_slider {
+  padding: 0 45px;
+  margin-bottom: 30px;
+}
+.product_slider .heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.product_slider .link_products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_slider .heading h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.product_slider .heading p {
+  color: #9ca3af;
+  font-size: 13px;
+}
+.product_slider .link_products .view_all {
+  text-decoration: none;
+  color: #000;
+  width: 120px;
+  font-size: 16px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  gap: 5px;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.product_slider .link_products .view_all:hover {
+  box-shadow: 5px 5px 0 #000000;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 1025px) {
+  .carousel-item {
+    flex: 0 0 25%;
+  }
+}
+@media (max-width: 1025px) {
+  .carousel-item {
+    flex: 0 0 33.3333%;
+  }
+}
+@media (max-width: 769px) {
+  .carousel-item {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
+@media (max-width: 635px) {
+  .product_slider .heading {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .product_slider .link_products {
+    flex-direction: column;
+  }
+}

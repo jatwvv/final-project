@@ -38,7 +38,7 @@
           <fa-icon class="bars" [icon]="bars"></fa-icon>
         </button>
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-end"
           tabindex="-1"
           id="toggleMenu"
           aria-labelledby="toggleMenuLabel"
@@ -47,12 +47,12 @@
             <h5 class="offcanvas-title" id="toggleMenuLabel">Menu</h5>
             <button
               type="button"
-              class="btn-close text-reset"
+              class="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-            <fa-icon [icon]="x"></fa-icon>
-          </button>
+              <fa-icon [icon]="x"></fa-icon>
+            </button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav menu-color">
@@ -99,7 +99,9 @@
       <a href="#" class="wishlist">
         <fa-icon class="iconsize" [icon]="heart"></fa-icon>
       </a>
-      <a href="#" class="cart"> <fa-icon class="iconsize" [icon]="cart"></fa-icon> </a>
+      <a href="#" class="cart">
+        <fa-icon class="iconsize" [icon]="cart"></fa-icon>
+      </a>
     </div>
   </div>
   <nav class="navbar navbar-expand navbar-light">
@@ -116,11 +118,7 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <img
-            class="grid"
-            src="grid_home_menu_table_icon.svg"
-            alt=".."
-          />
+          <img class="grid" src="grid_home_menu_table_icon.svg" alt=".." />
           All Categories <fa-icon [icon]="down"></fa-icon>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

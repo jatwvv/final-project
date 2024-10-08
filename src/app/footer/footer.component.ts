@@ -5,6 +5,12 @@ import {
   faEnvelope,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faXTwitter,
+  faInstagram,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -17,4 +23,8 @@ export class FooterComponent {
   phone = faPhone;
   mail = faEnvelope;
   arrow = faChevronRight;
+  facebook = faFacebook;
+  instagram = faInstagram;
+  twitter = faXTwitter;
+  youtube = faYoutube;
 }

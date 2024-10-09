@@ -1,12 +1,4 @@
-import {
-  Component,
-  AfterViewInit,
-  ElementRef,
-  ViewChild,
-  NgZone,
-} from '@angular/core';
-import { fromEvent } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,54 +8,23 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
   imports: [FontAwesomeModule],
   templateUrl: './product-carousal.component.html',
   styleUrl: './product-carousal.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ProductCarousalComponent implements AfterViewInit {
-  @ViewChild('carousel') carouselElement!: ElementRef;
-  // leftArrow = faArrowLeft;
+export class ProductCarousalComponent {
   right = faArrowRight;
-
-  private carouselInner!: HTMLElement;
-  private items: HTMLElement[] = [];
-  private itemWidth = 0;
-  private currentIndex = 0;
-
-  constructor(private el: ElementRef, private ngZone: NgZone) {}
-
-  ngAfterViewInit() {
-    this.ngZone.runOutsideAngular(() => {
-      setTimeout(() => {
-        this.initializeCarousel();
-      }, 0);
-    });
-  }
-
-  private initializeCarousel() {
-    this.carouselInner = this.el.nativeElement.querySelector('.carousel-inner');
-    this.items = Array.from(this.carouselInner.children) as HTMLElement[];
-
-    if (this.items.length > 0) {
-      this.itemWidth = this.items[0].offsetWidth;
-    }
-
-    this.updateCarousel();
-  }
-
-  private updateCarousel() {
-    const translateX = -this.currentIndex * this.itemWidth;
-    this.carouselInner.style.transform = `translateX(${translateX}px)`;
-  }
-
-  nextSlide() {
-    if (this.currentIndex < this.items.length - 1) {
-      this.currentIndex++;
-      this.updateCarousel();
-    }
-  }
-
-  prevSlide() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      this.updateCarousel();
+  slidesPerView: number = 4;
+  screenWidth!: number;
+  @HostListener('window:resize')
+  getScreenWidth() {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth >= 320 && this.screenWidth <= 480) {
+      this.slidesPerView = 1;
+    } else if (this.screenWidth >= 480 && this.screenWidth <= 769) {
+      this.slidesPerView = 2;
+    } else if (this.screenWidth >= 769 && this.screenWidth <= 1024) {
+      this.slidesPerView = 3;
+    } else if (this.screenWidth >= 1024 && this.screenWidth <= 1440) {
+      this.slidesPerView = 4;
     }
   }
 }

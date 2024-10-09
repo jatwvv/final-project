@@ -9,7 +9,6 @@ import { ProductCarouselTwoComponent } from './product-carousel-two/product-caro
 import { TopRatingComponent } from './top-rating/top-rating.component';
 import { MapComponent } from './map/map.component';
 import { FooterComponent } from './footer/footer.component';
-import { CarouselTestComponent } from './carousel-test/carousel-test.component';
 import { MarqueeBrandsComponent } from './marquee-brands/marquee-brands.component';
 @Component({
   selector: 'app-root',
@@ -25,7 +24,6 @@ import { MarqueeBrandsComponent } from './marquee-brands/marquee-brands.componen
     TopRatingComponent,
     MapComponent,
     FooterComponent,
-    CarouselTestComponent,
     MarqueeBrandsComponent,
   ],
   templateUrl: './app.component.html',

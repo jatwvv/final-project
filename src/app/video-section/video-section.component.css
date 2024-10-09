@@ -34,11 +34,11 @@
   align-items: center;
   justify-content: center;
   background-color: #ba99ce;
-  transition: all 0.8s ease;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 .section-container:hover .hover-side {
   right: 0;

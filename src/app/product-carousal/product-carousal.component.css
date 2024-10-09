@@ -97,3 +97,28 @@ swiper-slide {
     text-align: center;
   }
 }
+.bounce {
+  animation: bounce;
+  -webkit-animation: bounce;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  margin-left: 5px;
+}
+@keyframes bounce {
+  0% {
+    left: 5px;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 5px;
+  }
+}

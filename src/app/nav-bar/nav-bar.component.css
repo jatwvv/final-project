@@ -236,6 +236,9 @@ span {
   background-color: #000000 !important;
   color: #fff !important;
 }
+.offcanvas {
+  width: 100% !important;
+}
 
 @media (min-width: 901px) {
   .navbar-toggler {

@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faStar } from '@fortawesome/free-regular-svg-icons';
+import { faStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-top-rating',
@@ -12,6 +12,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 })
 export class TopRatingComponent {
   star = faStar;
+  heart = faHeart;
   slidesPerView: number = 4;
   screenWidth!: number;
   @HostListener('window:resize')

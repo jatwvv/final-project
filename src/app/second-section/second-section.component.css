@@ -113,6 +113,12 @@ a:hover {
     scale: 1.7;
   }
 }
+@media (max-width: 530px){
+  p {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 375px) {
   .section-container {
     padding: 15px;
